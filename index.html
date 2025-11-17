@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shore Institute & Tech Academy</title>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <!-- Mobile-only warning overlay (place BEFORE .container in the body) -->
+<div id="mobileOverlay" class="mobile-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="mobile-overlay-content" role="document">
+    <h2>Desktop / Laptop Required</h2>
+    <p>This application is best used on a laptop or desktop for accurate typing practice and results. Please open this site on a laptop or desktop computer.</p>
+    <p class="small-note">If you're on a tablet, try switching to a laptop for the full experience.</p>
+    
+  </div>
+</div>
+
+        <div class="container">
+            <header class="header">
+                <h1 class="institute">
+                    <img src="image1.png" alt="logo">Shore Institute <span style="color: orange;">& Tech Academy</span>
+                </h1>
+                <h2 class="title">Typing Speed Test</h2>
+                <p class="subtitle">Test your speed and accuracy</p>
+            </header>
+            <main>
+                <div class="stats-container">
+                    <!-- STATS ROW -->
+                    <div class="stats-row">
+                        <div class="stat-card">
+                            <div class="stat-value" id="wpmStat">0</div>
+                            <div class="stat-label">Words per Minutes</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="accuracyStat">0%</div>
+                            <div class="stat-label">Accuracy</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="charsStat">0</div>
+                            <div class="stat-label">Characters</div>
+                        </div>
+                    </div>
+                    <!-- TIMER -->
+                    <div class="timer" id="timerDisplay">Timer: 0:00</div>
+                    <!-- TEXT BOX -->
+                    <div class="text-display" id="textDisplay"></div>
+                    <!-- INPUT FIELD -->
+                    <div class="input-section">
+                        <input type="text" class="input-field" id="inputField"
+                            placeholder="Start typing here...." autocomplete="off"
+                            autocorrect="off" spellcheck="false" title="The timer will start after you begin typing!">
+                    </div>
+                    <!-- BUTTONS -->
+                    <div class="controls">
+                        <button class="btn btn-primary" id="restartBtn">Start Test</button>
+                        <button class="btn btn-secondary" id="newTextBtn">Reset</button>
+                    </div>
+                </div>
+                <!-- MODAL (UNCHANGED) -->
+                <div class="modal" id="resultsModal">
+                    <div class="modal-content">
+                        <h2 class="modal-title">Test Results</h2>
+                        <div class="result-stats">
+                            <div class="result-stat">
+                                <div class="result-value" id="finalWpm">0</div>
+                                <div class="result-label">WPM</div>
+                            </div>
+                            <div class="result-stat">
+                                <div class="result-value" id="finalAccuracy">0%</div>
+                                <div class="result-label">Accuracy</div>
+                            </div>
+                            <div class="result-stat">
+                                <div class="result-value" id="finalChars">0</div>
+                                <div class="result-label">Characters</div>
+                            </div>
+                            <div class="result-stat">
+                                <div class="result-value" id="finalErrors">0%</div>
+                                <div class="result-label">Errors</div>
+                            </div>
+                        </div>
+                        <p class="output" id="output"></p>
+                      <p class="common" id="common"></p>
+
+                        <button class="btn btn-primary" onclick="restartTest()">Try Again</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <footer>
+            <h3>Shore Institute & Tech Academy</h3>
+            <p><i class='bx bxs-location-plus'></i> Kummari vari vedhi, Samalkot, Andhra Pradesh, 533440</p>
+            <p style="text-align: center; font-size: 14px;">
+                           © 2025 Shore Institute & Tech Academy. All Rights Reserved.</p>
+            <p>Designed by <span style="font-weight: bold; font-family: itatic; font-style: italic;">Phaniram Nimmakayala</span></p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
